@@ -2,13 +2,26 @@ const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissor = document.querySelector(".scissors");
 const userScore = document.querySelector(".changeUserScore")
-let score;
+let score = 1;
 let user;
 
-rock.addEventListener("click", () => {
-  rock.textContent = "head";
 
-})
+while(score >= 1 && score <= 5) {
+  if (score <= 5) {
+    rock.addEventListener("click", () => {
+      userScore.textContent = score;
+    })
+  }
+  console.log(score++);
+}
+
+
+
+// rock.addEventListener("click", () => {
+//   userScore.textContent = "2";
+// })
+
+
 
 function computer() {
   let computerMove = Math.floor(Math.random() * 3) + 1;
