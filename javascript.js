@@ -1,40 +1,33 @@
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissor = document.querySelector(".scissors");
-const userScore = document.querySelector(".changeUserScore")
-let score = 1;
-let user;
+const score = document.querySelector(".changeUserScore");
+let computerChoice;
+let winScore = 0;
 
 
-while(score >= 1 && score <= 5) {
-  if (score <= 5) {
-    rock.addEventListener("click", () => {
-      userScore.textContent = score;
-    })
-  }
-  console.log(score++);
-}
-
-
-
-// rock.addEventListener("click", () => {
-//   userScore.textContent = "2";
-// })
-
-
+// 1 = Rock
+// 2 = Paper
+// 3 = Scissors
 
 function computer() {
-  let computerMove = Math.floor(Math.random() * 3) + 1;
-  return computerMove;
+  computerChoice = Math.floor(Math.random() * 3) + 1;
+
+  if (computerChoice == 1) {
+    return computerChoice;
+  } else if (computerChoice == 2) {
+    return computerChoice;
+  } else {
+    return computerChoice;
+  }
 }
 
-// for (let i = 1; i <= 5; i++) {
-//   user = prompt("Enter yes to continue");
-//   user = user.toLowerCase();
-//   if (user == "yes") {
-//     console.log("ok");
-//   } else {
-//     i = 6;
-//     console.log("you fucked up");
-//   }
-// }
+
+rock.addEventListener("click", () => {
+  let newChoice = computer();
+
+  if(newChoice == 1) {
+    score.textContent = winScore = winScore + 1;
+  }
+  console.log(newChoice);
+})  
