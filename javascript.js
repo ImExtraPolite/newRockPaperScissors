@@ -11,8 +11,6 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-
-  
   if(playerSelection == "rock" && computerSelection == "rock") {
     return "tie!";
   } else if (playerSelection == "rock" && computerSelection == "paper") {
@@ -46,7 +44,14 @@ let t = 0;
 
 
 rock.addEventListener("click", () => {
-  console.log(playRound(rock.textContent, getComputerChoice()));
+  let value = playRound(rock.textContent, getComputerChoice());
+  if(value == "tie!") {
+    tie.textContent = t++;
+  } else if (value == "You lose! Paper beats rock.") {
+    lose.textContent = l++;
+  } else if (value == "You win! Rock beats scissors") {
+    win.textContent = w++;
+  }
 });
 
 paper.addEventListener("click", () => {
