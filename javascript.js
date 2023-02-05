@@ -26,7 +26,7 @@ function playRound(playerSelection, computerSelection) {
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
     return "You lose! Rock beat scissors";
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
-    return "You win! scissors beats paper";
+    return "You win! scissors beats paper.";
   } else {
     return "tie!";
   }
@@ -46,27 +46,42 @@ let t = 1;
 rock.addEventListener("click", () => {
   value = playRound(rock.textContent, getComputerChoice());
 
-  if(value == "tie!") {
-    tie.textContent = t++;
-  } else if (value == "You lose! Paper beats rock.") {
-    lose.textContent = l++;
-  } else if (value == "You win! Rock beats scissors") {
-    win.textContent = w++;
+  if (l < 6 && w < 6) {
+    if(value == "tie!") {
+      tie.textContent = t++;
+    } else if (value == "You lose! Paper beats rock.") {
+      lose.textContent = l++;
+    } else if (value == "You win! Rock beats scissors") {
+      win.textContent = w++;
+    }
   }
 });
 
 paper.addEventListener("click", () => {
-  value = playRound(paper.textContent, getComputerChoice())
+  value = playRound(paper.textContent, getComputerChoice());
 
-  if(value == "tie!") {
-    tie.textContent = t++;
-  } else if (value == "You lose! scissors beat paper.") {
-    lose.textContent = l++;
-  } else if (value == "You win! Paper beats rock.") {
-    win.textContent = w++;
+  if (l < 6 && w < 6) {
+    if(value == "tie!") {
+      tie.textContent = t++;
+    } else if (value == "You lose! scissors beat paper.") {
+      lose.textContent = l++;
+    } else if (value == "You win! Paper beats rock.") {
+      win.textContent = w++;
+    }
   }
 });
 
 scissors.addEventListener("click", () => {
-  console.log(playRound(scissors.textContent, getComputerChoice()));
+  value = playRound(scissors.textContent, getComputerChoice());
+
+  if (l < 6 && w < 6) {
+    if(value == "tie!") {
+      tie.textContent = t++;
+    } else if (value == "You lose! Rock beat scissors") {
+      lose.textContent = l++;
+    } else if (value == "You win! scissors beats paper.") {
+      win.textContent = w++;
+    }
+  }
 });
+
