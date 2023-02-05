@@ -38,13 +38,14 @@ const scissors = document.querySelector(".scissorsButton");
 const win = document.querySelector(".winPoints");
 const lose = document.querySelector(".losePoints");
 const tie = document.querySelector(".tiePoints");
-let w = 0;
-let l = 0;
-let t = 0;
-
+let value;
+let w = 1;
+let l = 1;
+let t = 1;
 
 rock.addEventListener("click", () => {
-  let value = playRound(rock.textContent, getComputerChoice());
+  value = playRound(rock.textContent, getComputerChoice());
+
   if(value == "tie!") {
     tie.textContent = t++;
   } else if (value == "You lose! Paper beats rock.") {
@@ -55,7 +56,15 @@ rock.addEventListener("click", () => {
 });
 
 paper.addEventListener("click", () => {
-  console.log(playRound(paper.textContent, getComputerChoice()));
+  value = playRound(paper.textContent, getComputerChoice())
+
+  if(value == "tie!") {
+    tie.textContent = t++;
+  } else if (value == "You lose! scissors beat paper.") {
+    lose.textContent = l++;
+  } else if (value == "You win! Paper beats rock.") {
+    win.textContent = w++;
+  }
 });
 
 scissors.addEventListener("click", () => {
