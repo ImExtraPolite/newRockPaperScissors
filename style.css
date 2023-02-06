@@ -15,6 +15,33 @@ h1 {
   font-size: 50px;
 }
 
+.header p {
+  font-size: 20px;
+  margin: 20px 0 0 0;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;  
+  justify-content: center;
+  gap: 40px;
+}
+
 button {
-  padding: 20px;
+  padding: 50px;
+  font-size: 20px;
+  border-radius: 30px;
+  border: solid white;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.score {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }

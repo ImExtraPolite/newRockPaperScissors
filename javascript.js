@@ -58,9 +58,9 @@ rock.addEventListener("click", () => {
   }
 
   if (w == 6) {
-    text.textContent = "You win!";
+    text.textContent = "Nice, You win!";
   } else if (l == 6) {
-    text.textContent = "You lose!";
+    text.textContent = "Imagine losing to a computer.";
   }
 });
 
@@ -80,9 +80,9 @@ paper.addEventListener("click", () => {
   }
 
   if (w == 6) {
-    text.textContent = "You win!";
+    text.textContent = "Nice, You win!";
   } else if (l == 6) {
-    text.textContent = "You lose!";
+    text.textContent = "Imagine losing to a computer.";
   }
 });
 
@@ -102,9 +102,9 @@ scissors.addEventListener("click", () => {
   }
 
   if (w == 6) {
-    text.textContent = "You win!";
+    text.textContent = "Nice, You win!";
   } else if (l == 6) {
-    text.textContent = "You lose!";
+    text.textContent = "Imagine losing to a computer.";
   }
 });
 
