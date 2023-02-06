@@ -35,25 +35,32 @@ function playRound(playerSelection, computerSelection) {
 const rock = document.querySelector(".rockButton");
 const paper = document.querySelector(".paperButton");
 const scissors = document.querySelector(".scissorsButton");
+const text = document.querySelector(".text");
 const win = document.querySelector(".winPoints");
 const lose = document.querySelector(".losePoints");
-const tie = document.querySelector(".tiePoints");
 let value;
 let w = 1;
 let l = 1;
-let t = 1;
 
 rock.addEventListener("click", () => {
   value = playRound(rock.textContent, getComputerChoice());
 
   if (l < 6 && w < 6) {
     if(value == "tie!") {
-      tie.textContent = t++;
+      text.textContent = "tie!";
     } else if (value == "You lose! Paper beats rock.") {
       lose.textContent = l++;
+      text.textContent = "You lose! Paper beats rock.";
     } else if (value == "You win! Rock beats scissors") {
       win.textContent = w++;
+      text.textContent = "You win! Rock beats scissors";
     }
+  }
+
+  if (w == 6) {
+    text.textContent = "You win!";
+  } else if (l == 6) {
+    text.textContent = "You lose!";
   }
 });
 
@@ -62,12 +69,20 @@ paper.addEventListener("click", () => {
 
   if (l < 6 && w < 6) {
     if(value == "tie!") {
-      tie.textContent = t++;
+      text.textContent = "tie!";
     } else if (value == "You lose! scissors beat paper.") {
       lose.textContent = l++;
+      text.textContent = "You lose! scissors beat paper.";
     } else if (value == "You win! Paper beats rock.") {
       win.textContent = w++;
+      text.textContent = "You win! Paper beats rock.";
     }
+  }
+
+  if (w == 6) {
+    text.textContent = "You win!";
+  } else if (l == 6) {
+    text.textContent = "You lose!";
   }
 });
 
@@ -76,12 +91,21 @@ scissors.addEventListener("click", () => {
 
   if (l < 6 && w < 6) {
     if(value == "tie!") {
-      tie.textContent = t++;
+      text.textContent = "tie!"
     } else if (value == "You lose! Rock beat scissors") {
       lose.textContent = l++;
+      text.textContent = "You lose! Rock beat scissors";
     } else if (value == "You win! scissors beats paper.") {
       win.textContent = w++;
+      text.textContent = "You win! scissors beats paper.";
     }
   }
+
+  if (w == 6) {
+    text.textContent = "You win!";
+  } else if (l == 6) {
+    text.textContent = "You lose!";
+  }
 });
+
 

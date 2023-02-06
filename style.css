@@ -6,3 +6,15 @@
   background-color: rgb(55, 55, 55);
   font-family: Helvetica, sans-serif;
 }
+
+.header {
+  padding: 70px 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+button {
+  padding: 20px;
+}

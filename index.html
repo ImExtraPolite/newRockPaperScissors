@@ -9,16 +9,23 @@
   </head>
 
   <body>
-    <div class="game">
-      <button class="rockButton">rock</button>
-      <button class="paperButton">paper</button>
-      <button class="scissorsButton">scissors</button>
-    </div>
+    <div id="container">
+      <div class="header">
+        <h1>ROCK, PAPER, SCISSORS</h1>
+      </div>
 
-    <div class="score">
-      <p>You have <span class="winPoints">0</span> points</p>
-      <p>Computer has <span class="losePoints">0</span> points</p>
-      <p>Ties: <span class="tiePoints">0</span></p>
+      <div class="game">
+        <p class="text">Click on any of the buttons to begin the game!</p>
+
+        <button class="rockButton">rock</button>
+        <button class="paperButton">paper</button>
+        <button class="scissorsButton">scissors</button>
+      </div>
+  
+      <div class="score">
+        <p>You have <span class="winPoints">0</span> points</p>
+        <p>Computer has <span class="losePoints">0</span> points</p>
+      </div>
     </div>
 
     <script src="javascript.js"></script>
